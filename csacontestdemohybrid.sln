@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csacontestdemohybrid", "csa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "formuploaderblob", "..\formuploaderblob\formuploaderblob.csproj", "{430F2121-00EF-4F01-BBCC-13A67D908CAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "funcformrecognizer", "..\funcformrecognizer\funcformrecognizer.csproj", "{A6B8C06D-EA02-4365-AE2D-6EE165759638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "funcformrecognizer", "..\funcformrecognizer\funcformrecognizer.csproj", "{A6B8C06D-EA02-4365-AE2D-6EE165759638}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
