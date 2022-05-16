@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csacontestdemohybrid", "csacontestdemohybrid.csproj", "{043FDEEA-45EE-4E2A-A1C0-D2BE13E59187}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "formuploaderblob", "..\formuploaderblob\formuploaderblob.csproj", "{430F2121-00EF-4F01-BBCC-13A67D908CAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "funcformrecognizer", "..\funcformrecognizer\funcformrecognizer.csproj", "{A6B8C06D-EA02-4365-AE2D-6EE165759638}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{043FDEEA-45EE-4E2A-A1C0-D2BE13E59187}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{043FDEEA-45EE-4E2A-A1C0-D2BE13E59187}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{043FDEEA-45EE-4E2A-A1C0-D2BE13E59187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430F2121-00EF-4F01-BBCC-13A67D908CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430F2121-00EF-4F01-BBCC-13A67D908CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430F2121-00EF-4F01-BBCC-13A67D908CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430F2121-00EF-4F01-BBCC-13A67D908CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6B8C06D-EA02-4365-AE2D-6EE165759638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B8C06D-EA02-4365-AE2D-6EE165759638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B8C06D-EA02-4365-AE2D-6EE165759638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B8C06D-EA02-4365-AE2D-6EE165759638}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
