@@ -2,7 +2,7 @@
 
 This reference architecture shows how to deploy an end-to-end hybrid work management application. It uses a  power apps app to book hybrid app and browser page for file/image for license plate ingestion, Azure Data Lake Storage to store the images, Azure Functions for serverless invocations, Azure Computer vision api (for this solution accelerator,) & CosmosDB to store the results.(PLACEHOLDER FOR POWERBI VISUALIZATION IF WE WANT). 
 
-![](./_images/admissions_process_solutions_architecture.png)
+![](./_images/Architecture.jpg)
 
 ## Deploy
 
