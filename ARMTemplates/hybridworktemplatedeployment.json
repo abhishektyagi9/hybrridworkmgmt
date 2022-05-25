@@ -59,7 +59,7 @@
     
     },
     
-         "computerVisionAccountname": {
+         "computerVisionAccountName": {
              "type": "string",
              "metadata": {
                  "description": "Computer vision service to process licenses"
@@ -91,15 +91,15 @@
 
     },
     "functions": [],
-    "variables": {
-          "hostingPlanName": "[parameters('functionHostingPlan')]",
+  "variables": {
+    "hostingPlanName": "[parameters('functionHostingPlan')]",
     "applicationInsightsName": "[variables('functionAppName')]",
-    "storageAccountName":"[toLower( concat( parameters('storageaccountname'), uniqueString(resourceGroup().id) ) )]",
-    "computervisionaccountaname":"[toLower( concat( parameters('computerVisionAccountname'), uniqueString(resourceGroup().id) ) )]",
-    "functionappname":"[toLower( concat( parameters('functionAppName'), uniqueString(resourceGroup().id) ) )]",
-    "cosmosdbaccountname" :"[toLower( concat( parameters('cosmosDbAccountName'), uniqueString(resourceGroup().id) ) )]"
-    
-    },
+    "storageAccountName": "[toLower( concat( parameters('storageaccountname'), uniqueString(resourceGroup().id) ) )]",
+    "computervisionaccountaname": "[toLower( concat( parameters('computerVisionAccountName'), uniqueString(resourceGroup().id) ) )]",
+    "functionappname": "[toLower( concat( parameters('functionAppName'), uniqueString(resourceGroup().id) ) )]",
+    "cosmosdbaccountname": "[toLower( concat( parameters('cosmosDbAccountName'), uniqueString(resourceGroup().id) ) )]"
+
+  },
     "resources": [
         {
             "name": "[variables('storageAccountName')]",
