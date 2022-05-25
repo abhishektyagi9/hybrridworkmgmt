@@ -1,39 +1,40 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "storageAccountName": {
-            "value": "licence"
-        },
-        "functionAppName": {
-            "value": "funcform"
-        },
-        "functionHostingPlan": {
-          "value": "funncapp1formreconplan" 
-        },
-        "computerVisionAccountName": {
-            "value": "computervisiondemo022" 
-        },
-        "apiType": {
-            "value": "ComputerVision"
-        },
-        "computerVisionSku": {
-            "value": "F0"
-        },
-        "blobContainerName": {
-            "value": "licenseplates" 
-        },"storageAccountType": {
-            "value": "Standard_LRS"
-        },
-        "linuxFxVersion": {
-            "value": "DOTNET|6.0"
-        },
-        "functionWorkerRuntime": {
-            "value": "dotnet"
-        },
-        "cosmosDbAccountName": {
-            "value" :"cosmosdbcsahybrid" 
-        }
-
+  "parameters": {
+    "storageAccountName": {
+      "value": "licence"
+    },
+    "functionAppName": {
+      "value": "funcform"
+    },
+    "functionHostingPlan": {
+      "value": "funncapp1formreconplan"
+    },
+    "computerVisionAccountName": {
+      "value": "computervisiondemo022"
+    },
+    "apiType": {
+      "value": "ComputerVision"
+    },
+    "computerVisionSku": {
+      "value": "F0"
+    },
+    "blobContainerName": {
+      "value": "licenseplates"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "linuxFxVersion": {
+      "value": "DOTNET|6.0"
+    },
+    "functionWorkerRuntime": {
+      "value": "dotnet"
+    },
+    "cosmosDbAccountName": {
+      "value": "cosmosdbcsahybrid"
     }
+
+  }
 }
