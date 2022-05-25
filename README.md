@@ -13,3 +13,5 @@ Before you hit the deploy button, make sure you review the details about the ser
 Once the resource deployed, you will need to deploy the functions to the Function App (at this time - could be further automated).
 
 > **Important:** This deployment accelerator implements some service features that are still in Public Preview. Please consider those before you plan for a production deployment.
+
+1> Deploy resources to 

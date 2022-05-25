@@ -2,14 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "storageaccountname": {
+        "storageAccountName": {
             "type": "string",
             "metadata": {
                 "description": "Name of storage accounts"
             },
             "defaultValue":""
         },
-        "blobcontainername": {
+        "blobContainerName": {
             "type": "string",
             "metadata": {
                 "description": "name of blob container to save forms"
@@ -26,18 +26,12 @@
         "description": "Storage Account type"
       }
     },
-       "functionappname": {
+       "functionAppName": {
       "type": "string",
       "metadata": {
         "description": "The name of the Azure Function app."
       }
     },
-         "computervisionaccountaname": {
-             "type": "string",
-             "metadata": {
-                 "description": "Computer vision service to process licenses"
-             }
-         },
            "functionWorkerRuntime": {
       "type": "string",
       "allowedValues": [
@@ -50,7 +44,7 @@
         "description": "The language worker runtime to load in the function app."
       }
     },
-    "funchostingpan": {
+    "functionHostingPlan": {
       "type": "string",
       "metadata": {
         "description": "Hosting plan for azure function"
@@ -64,6 +58,13 @@
         "defaultValue":"DOTNET|6.0"
     
     },
+    
+         "computerVisionAccountname": {
+             "type": "string",
+             "metadata": {
+                 "description": "Computer vision service to process licenses"
+             }
+         },
      
          "apiType": {
              "type": "string",
@@ -74,14 +75,14 @@
              "defaultValue":"ComputerVision"
              
          },
-         "computervisionsku": {
+         "computerVisionSku": {
              "type": "string",
              "metadata": {
                  "description": "Sku for form recognizer i.e S0 or F0"
              },
                "defaultValue":"F0"
          },
-        "cosmosdbaccountname": {
+        "cosmosDbAccountName": {
           "type": "string",
           "metadata": {
             "description": "description"
@@ -91,12 +92,12 @@
     },
     "functions": [],
     "variables": {
-          "hostingPlanName": "[parameters('funchostingpan')]",
+          "hostingPlanName": "[parameters('functionHostingPlan')]",
     "applicationInsightsName": "[variables('functionAppName')]",
     "storageAccountName":"[toLower( concat( parameters('storageaccountname'), uniqueString(resourceGroup().id) ) )]",
-    "computervisionaccountaname":"[toLower( concat( parameters('computervisionaccountaname'), uniqueString(resourceGroup().id) ) )]",
-    "functionappname":"[toLower( concat( parameters('functionappname'), uniqueString(resourceGroup().id) ) )]",
-    "cosmosdbaccountname" :"[toLower( concat( parameters('cosmosdbaccountname'), uniqueString(resourceGroup().id) ) )]"
+    "computervisionaccountaname":"[toLower( concat( parameters('computerVisionAccountname'), uniqueString(resourceGroup().id) ) )]",
+    "functionappname":"[toLower( concat( parameters('functionAppName'), uniqueString(resourceGroup().id) ) )]",
+    "cosmosdbaccountname" :"[toLower( concat( parameters('cosmosDbAccountName'), uniqueString(resourceGroup().id) ) )]"
     
     },
     "resources": [
