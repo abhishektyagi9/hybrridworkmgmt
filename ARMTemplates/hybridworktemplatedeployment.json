@@ -85,7 +85,31 @@
         "cosmosDbAccountName": {
           "type": "string",
           "metadata": {
-            "description": "description"
+            "description": "This column is used for creating cosmos db in serverless mode"
+          }
+        },
+        "sqlServerName": {
+          "type": "string",
+          "metadata": {
+            "description": "this column is used for defining sql server name"
+          }
+        },
+        "sqlDatabaseName": {
+          "type": "string",
+          "metadata": {
+            "description": "this column is used for defining sql server name"
+          }
+        },
+        "sqlServerUsername": {
+          "type": "string",
+          "metadata": {
+            "description": "this column is used for defining sql server username"
+          }
+        },
+        "sqlServerPassword": {
+          "type": "string",
+          "metadata": {
+            "description": "this column is used for defining sql server password"
           }
         }
 
@@ -97,7 +121,8 @@
     "storageAccountName": "[toLower( concat( parameters('storageaccountname'), uniqueString(resourceGroup().id) ) )]",
     "computervisionaccountaname": "[toLower( concat( parameters('computerVisionAccountName'), uniqueString(resourceGroup().id) ) )]",
     "functionappname": "[toLower( concat( parameters('functionAppName'), uniqueString(resourceGroup().id) ) )]",
-    "cosmosdbaccountname": "[toLower( concat( parameters('cosmosDbAccountName'), uniqueString(resourceGroup().id) ) )]"
+    "cosmosdbaccountname": "[toLower( concat( parameters('cosmosDbAccountName'), uniqueString(resourceGroup().id) ) )]",
+    "sqlservername": "[toLower( concat( parameters('sqlServerName'), uniqueString(resourceGroup().id) ) )]"
 
   },
     "resources": [
@@ -239,6 +264,52 @@
         "kind": "[parameters('apiType')]",
         "properties": {
           "customSubDomainName": "[toLower(variables('computervisionaccountaname'))]"
+        }
+      },
+      {
+        "name": "[variables('sqlservername')]",
+        "type": "Microsoft.Sql/servers",
+        "apiVersion": "2014-04-01",
+        "location": "[resourceGroup().location]",
+        "tags": {
+          "displayName": "[variables('sqlservername')]"
+        },
+        "properties": {
+          "administratorLogin": "[parameters('sqlServerUsername')]",
+          "administratorLoginPassword": "[parameters('sqlServerPassword')]"
+        },
+        "resources": [
+          {
+            "type": "firewallRules",
+            "apiVersion": "2014-04-01",
+            "dependsOn": [
+              "[resourceId('Microsoft.Sql/servers', variables('sqlservername'))]"
+            ],
+            "location": "[resourceGroup().location]",
+            "name": "AllowAllWindowsAzureIps",
+            "properties": {
+              "startIpAddress": "0.0.0.0",
+              "endIpAddress": "0.0.0.0"
+            }
+          }
+        ]
+      },
+      {
+        "name": "[concat(variables('sqlservername'),'/default/',parameters('sqlDatabaseName'))]",
+        "type": "Microsoft.Sql/servers/databases",
+        "apiVersion": "2014-04-01",
+        "location": "[resourceGroup().location]",
+        "tags": {
+          "displayName": "[variables('sqlservername')]"
+        },
+        "dependsOn": [
+          "[resourceId('Microsoft.Sql/servers', variables('sqlservername'))]"
+        ],
+        "properties": {
+          "collation": "SQL_Latin1_General_CP1_CI_AS",
+          "edition": "Basic",
+          "maxSizeBytes": "1073741824",
+          "requestedServiceObjectiveName": "Basic"
         }
       }
             
