@@ -8,9 +8,13 @@ This reference architecture shows how to deploy an end-to-end hybrid work manage
 
 Before you hit the deploy button, make sure you review the details about the services deployed.
 
+Deploy to Azure Global:
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fabhishektyagi9%2Fhybrridworkmgmt%2Fmaster%2FARMTemplates%2Fhybridworktemplatedeployment.json)
 
 
+
+
+Deploy to Azure Government:
 [![Deploy to Azure Gov](https://aka.ms/deploytoazurebutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fabhishektyagi9%2Fhybrridworkmgmt%2Fmaster%2FARMTemplates%2Fhybridworktemplatedeployment.json)
 
 Once the resource deployed, you will need to deploy the functions to the Function App (at this time - could be further automated).
