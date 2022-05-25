@@ -16,5 +16,7 @@ Once the resource deployed, you will need to deploy the functions to the Functio
 > **Important:** This deployment accelerator implements some service features that are still in Public Preview. Please consider those before you plan for a production deployment.
 
 1> Deploy resources to Azure using Deploy to Azure Button
+
+</br>
 2>Upload Powerapps template to Powerapp gallery for your organization
 3>Upload PowerBI template in desktop power BI APP(Power BI template to be uploaded soon)``
