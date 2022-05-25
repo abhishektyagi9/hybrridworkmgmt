@@ -10,8 +10,13 @@ Before you hit the deploy button, make sure you review the details about the ser
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fabhishektyagi9%2Fhybrridworkmgmt%2Fmaster%2FARMTemplates%2Fhybridworktemplatedeployment.json)
 
+
+[![Deploy to Azure Gov](https://aka.ms/deploytoazurebutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fabhishektyagi9%2Fhybrridworkmgmt%2Fmaster%2FARMTemplates%2Fhybridworktemplatedeployment.json)
+
 Once the resource deployed, you will need to deploy the functions to the Function App (at this time - could be further automated).
 
 > **Important:** This deployment accelerator implements some service features that are still in Public Preview. Please consider those before you plan for a production deployment.
 
-1> Deploy resources to 
+1> Deploy resources to Azure using Deploy to Azure Button
+2>Upload Powerapps template to Powerapp gallery for your organization
+3>Upload PowerBI template in desktop power BI APP(Power BI template to be uploaded soon)``
